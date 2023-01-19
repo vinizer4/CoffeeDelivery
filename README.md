@@ -1,31 +1,32 @@
+# Coffee Delivery
 
-<h3 align="center">
-  <a href="https://cahmoraes.github.io/coffee-delivery">Coffee Delivery</a>
-</h3>
+Uma aplicação de compra em uma cafeteria, com sistema de carrinho de compras utilizando contexto, rotas, styled-components, hooks e etc.
 
----
+## Página Inicial 
+### Web Application
 
-## :rocket: Sobre
+<img src='https://dc624.4shared.com/img/ufQqwR62iq/s24/182ff641b98/home?async&rand=0.5822499857220982' />
 
-Projeto construído como desafio proposto pela Rocketseat no programa Ignite. 
-<a href="https://efficient-sloth-d85.notion.site/Desafio-02-Coffee-Delivery-30e42a21fdb44b09a85244fc2c3dbdf9">Instruções</a>
+### Mobile App
 
-### :computer: Desktop
-<p align="center">
-  <img src="https://github.com/Cahmoraes/coffee-delivery/blob/main/src/assets/demo/demo.gif" alt="Coffee Delivery">
-<p/>
+<img src='https://dc624.4shared.com/img/IzFzR0mmiq/s24/182ff6413c8/home-resposive?async&rand=0.864751167088555' />
 
+## Página de formulário e inserção de dados:
+### Web Application
 
-### :book: Aprendizado
-- Utilização da arquitera Flux com hook useReducer.
-- Type Predicate do Tyepscript para identificar interface e e enum de objetos passados para as actions.
+<img src='https://dc624.4shared.com/img/3jKF3zoFea/s24/182ff6413c8/pedido?async&rand=0.49399313412571977' />
 
-## :computer: Tecnologias utilizadas
+### Mobile App
 
-- [typescript](https://www.typescriptlang.org/)
-- [reactjs](https://pt-br.reactjs.org/)
-- [styled-components](https://styled-components.com/)
+<img src='https://dc624.4shared.com/img/t_A3Kxu6iq/s24/182ff6413c8/pedido-responsive?async&rand=0.834910889495392' />
 
-## :warning: Pré-requisitos
+## Página de confirmação de pedido
+### Web Application
 
-- [git](https://git-scm.com/)
+<img src='https://dc624.4shared.com/img/z-XRuDrwea/s24/182ff640fe0/finalizado?async&rand=0.6681646359532394' />
+
+### Mobile App
+
+<img src='https://dc624.4shared.com/img/9ijthtlZiq/s24/182ff6413c8/finalizado-responsive?async&rand=0.9707941593234333' />
+
+<a href='https://coffee-delivery-gabriel.netlify.app/'><button>ACESSAR SITE EM FUNCIONAMENTO</button><a/>

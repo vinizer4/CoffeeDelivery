@@ -1,15 +1,14 @@
 import { BrowserRouter } from 'react-router-dom'
-import { CoffeeProvider } from './contexts/CoffeeContext'
-import { Router } from './Router'
-import { GlobalStyle } from './styles/global'
+import { CartContextProvider } from './contexts/CartContext'
+import { Router } from './Routes'
 
-export function App() {
+export function App () {
+
   return (
     <BrowserRouter>
-      <CoffeeProvider>
+      <CartContextProvider>
         <Router />
-      </CoffeeProvider>
-      <GlobalStyle />
+      </CartContextProvider>
     </BrowserRouter>
   )
 }

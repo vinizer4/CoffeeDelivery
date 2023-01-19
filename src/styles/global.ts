@@ -1,54 +1,52 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
+import { ThemeType } from "../@types/default";
 
-export const GlobalStyle = createGlobalStyle`
-  :root {
-    --yellow-dark: #C47F17;
-    --yellow: #DBAC2C;
-    --yellow-light: #F1E9C9;
+export const GlobalStyle = createGlobalStyle<{ theme: ThemeType}>`
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+    }
 
-    --purple-dark: #4B2995;
-    --purple: #8047F8;
-    --purple-light: #EBE5F9;
+    body {
+        background: ${({ theme }) => theme.colors['base-background']};
+        color: ${({theme}) => theme.colors['base-text']};
+        -webkit-font-smoothing: antialiased;
+    }
 
-    --base-title: #272221;
-    --base-subtitle: #403937;
-    --base-text: #574F4D;
-    --base-label: #8D8686;
-    --background: #FAFAFA;
-    --white: #FFFFFF;
-    --base-card: #F3F2F2;
-    --base-button: #E6E5E5;
-    --base-input: #EEEDED;
-  }
+    body, input, textarea, button {
+        font-family: ${({ theme }) => theme.fonts.regular};
+        font-weight: 400;
+        font-size: ${({ theme }) => theme.textSizes["text-regular-m"]};
+    }
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+    button {
+        cursor: pointer;
+    }
 
-  @media (max-width: 768) {
-    font-size: 56.3%;
-  }
+    a {
+        text-decoration: none;
+    }
 
-  html {
-    font-size: 62.5%;
-  }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 
-  body {
-    font-size: 1.6rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    background: var(--background);
-    color: var(--base-text);
-  }
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
 
-  img {
-    max-width: 100%;
-    display: block;
-  }
-
-  button {
-    cursor: pointer;
-  }
-`
+    ::-webkit-scrollbar {
+        width: 0.4rem;
+    }
+    ::-webkit-scrollbar-track {
+        background: ${({ theme }) => theme.colors["base-button"]}
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 2rem;
+        background: ${({ theme }) => theme.colors["brand-purple"]}
+    }
+`;

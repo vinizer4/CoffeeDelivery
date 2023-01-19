@@ -1,17 +1,26 @@
-import {
-  forwardRef,
-  ForwardRefRenderFunction,
-  InputHTMLAttributes,
-} from 'react'
-import { InputContainer } from './styles'
+import { forwardRef, InputHTMLAttributes } from "react";
+import { RegularText } from "../Typography";
+import { InputStyleContainer, InputStyled, InputWrapper, RightText } from "./styles";
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
+type InputProps = InputHTMLAttributes<HTMLInputElement> & {
+    error?: string;
+    rightText?: string;
+};
 
-const InputComponent: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
-  { ...rest }: InputProps,
-  ref,
-) => {
-  return <InputContainer ref={ref} {...rest}></InputContainer>
-}
-
-export const Input = forwardRef(InputComponent)
+export const Input = forwardRef<HTMLInputElement, InputProps>(
+    ({ error, className, rightText, ...props }, ref) => {
+        return (
+            <InputWrapper className={className}>
+                <InputStyleContainer hasError={!!error}>
+                    <InputStyled {...props} ref={ref} />
+                    {rightText && <RightText>{rightText}</RightText>}
+                </InputStyleContainer>
+                {error && (
+                    <RegularText size="s">
+                        {error}
+                    </RegularText>
+                )}
+            </InputWrapper>
+        )
+    }
+);
